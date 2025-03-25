@@ -2,20 +2,22 @@
 
 This repository contains a Physics-Informed Neural Network (PINN) implementation that solves a coupled Gross–Pitaevskii (GP)-type (nonlinear Schrödinger) equation. The exact solution used is:
 
-\[
+$$
 \psi(x,t) = \operatorname{sech}(x) \, e^{i\,t}
-\]
+$$
 
 which is split into its real and imaginary parts:
-- \( u(x,t) = \operatorname{sech}(x) \cos(t) \)
-- \( v(x,t) = \operatorname{sech}(x) \sin(t) \)
+
+- $u(x,t) = \operatorname{sech}(x)\cos(t)$  
+- $v(x,t) = \operatorname{sech}(x)\sin(t)$
 
 ## Overview
 
 - **Physics-Informed Loss:**  
   The PINN enforces the governing equation by computing the PDE residuals using automatic differentiation. The residuals are derived by splitting the complex nonlinear Schrödinger equation into two real-valued equations:
-  - \( -v_t + 0.5\, u_{xx} + (u^2+v^2)u = 0 \)
-  - \( u_t + 0.5\, v_{xx} + (u^2+v^2)v = 0 \)
+
+- $-v_t + 0.5\, u_{xx} + (u^2+v^2)u = 0$  
+- $u_t + 0.5\, v_{xx} + (u^2+v^2)v = 0$
 
 - **Fourier Features & Normalization:**  
   A Fourier feature layer is used to map the low-dimensional input \((x, t)\) to a higher-dimensional space to capture high-frequency variations. Input data is normalized to stabilize training.
@@ -36,7 +38,7 @@ which is split into its real and imaginary parts:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/madhushankara/your-repo-name.git
+   git clone https://github.com/madhushankara/your-repo-name.git](https://github.com/madhushankara/PINN/blob/1d64fdeca40c963d29e6a434fb8febbfe3bd36d2/schrodinger_equation.ipynb
    ```
 2. Open the notebook in Google Colab or run the Python script locally.
 3. The main script will generate adaptive collocation points, train the PINN model, and produce the visualizations.
@@ -44,7 +46,7 @@ which is split into its real and imaginary parts:
 
 ## Requirements
 
-- Python 3.x  
+- Python 3
 - PyTorch  
 - NumPy  
 - Matplotlib  
