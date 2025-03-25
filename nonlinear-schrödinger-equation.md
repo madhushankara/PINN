@@ -1,4 +1,4 @@
-# Enhanced PINN for a Coupled Gross–Pitaevskii Equation
+#PINN for a Coupled Gross–Pitaevskii Equation
 
 This repository contains a Physics-Informed Neural Network (PINN) implementation that solves a coupled Gross–Pitaevskii (GP)-type (nonlinear Schrödinger) equation. The exact solution used is:
 
