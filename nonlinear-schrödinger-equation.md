@@ -3,13 +3,13 @@
 This repository contains a Physics-Informed Neural Network (PINN) implementation that solves a coupled Gross–Pitaevskii (GP)-type (nonlinear Schrödinger) equation. The exact solution used is:
 
 $$
-\psi(x,t) = \operatorname{sech}(x) \, e^{i\,t}
+\psi(x,t) = {sech}(x) \, e^{i\,t}
 $$
 
 which is split into its real and imaginary parts:
 
-- $u(x,t) = \operatorname{sech}(x)\cos(t)$  
-- $v(x,t) = \operatorname{sech}(x)\sin(t)$
+- $u(x,t) = {sech}(x)\cos(t)$  
+- $v(x,t) = {sech}(x)\sin(t)$
 
 ## Overview
 
